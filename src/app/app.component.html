@@ -3,27 +3,7 @@
     <div class="col-lg">
       <h2>Posts</h2>
       <ul class="list-group">
-        <li class="list-group-item">
-          <h3>Titre</h3>
-          <p>lorem ipsum </p>
-          <span style="position:absolute; top : 0.5em; right : 0.5em;">Date</span>
-          <button class="btn btn-success">Love it !</button>
-          <button class="btn btn-danger">Don't love it !</button>
-        </li>
-        <li class="list-group-item">
-          <h3>Titre</h3>
-          <p>lorem ipsum </p>
-          <span style="position:absolute; top : 0.5em; right : 0.5em;">Date</span>
-          <button class="btn btn-success">Love it !</button>
-          <button class="btn btn-danger">Don't love it !</button>
-        </li>
-        <li class="list-group-item">
-          <h3>Titre</h3>
-          <p>lorem ipsum </p>
-          <span style="position:absolute; top : 0.5em; right : 0.5em;">Date</span>
-          <button class="btn btn-success">Love it !</button>
-          <button class="btn btn-danger">Don't love it !</button>
-        </li>
+        <app-post-list-item *ngFor="let post of posts" [title]="post.title" [content]="post.content"></app-post-list-item>
       </ul>
     </div>
   </div>

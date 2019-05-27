@@ -1,3 +1,7 @@
-<p>
-  post-list-item works!
-</p>
+<li [ngClass]="{'list-group-item' : true, 'list-group-item-success' : loveIts > 0, 'list-group-item-danger' : loveIts < 0}">
+  <h3>{{title}}</h3>
+  <p>{{content}}</p>
+  <span style="position:absolute; top : 0.5em; right : 0.5em;">{{created_at | date: 'yyyy/MM/dd, hh:mm'}}</span>
+  <button class="btn btn-success" (click)="onUpVote()">Love it !</button>
+  <button class="btn btn-danger" (click)="onDownVote()">Don't love it !</button>
+</li>
